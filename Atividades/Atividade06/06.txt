@@ -1,0 +1,23 @@
+v.
+	comando: insert into turma(id_turma, num_periodo, id_professor) values(3, 20201, 3);
+	resposta: Erro de chave estrangeira pois id_professor=3 não existe na tabela professor.
+
+vi.
+	comando: insert into turma(id_turma, num_periodo, id_disciplina) values(3, 20202, 1);
+	resposta: Sucesso, uma linha atualizada.
+
+vii.
+	comando: update disciplina set id_disciplina=3 where nome_disciplina='BANCO DE DADOS I';
+	resposta: Erro de chave estrangeira pois id_disciplina=1 ainda é referenciado na tabela turma.
+
+viii.
+	comando: update historico set num_faltas=0 where id_aluno=1 and id_turma=1;
+	resposta: Sucesso, uma linha atualizada.
+
+ix.
+	comando: delete from aluno where nome_aluno='PEDRO';
+	resposta: Sucesso, o aluno Pedro foi deletado da tabela aluno. Uma linha atualizada.
+
+x.
+	comando: delete from disciplina where nome_disciplina='BANCO DE DADOS II';
+	resposta: Sucesso. A disciplina Banco de Dados II foi deletada da tabela disciplina. Uma linha atualizada.
